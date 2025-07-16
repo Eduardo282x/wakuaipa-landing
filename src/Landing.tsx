@@ -23,6 +23,7 @@ import {
     Database,
     Server,
 } from "lucide-react"
+import { motion } from "framer-motion"
 
 export const Landing = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -113,29 +114,38 @@ export const Landing = () => {
                                         { icon: Target, title: "Centralización", desc: "Toda la información en un solo lugar" },
                                         { icon: TrendingUp, title: "Trazabilidad", desc: "Seguimiento completo de recursos y donaciones" },
                                         { icon: Zap, title: "Automatización", desc: "Procesos optimizados y reportes automáticos" },
-                                    ].map((item, index) => (
-                                        <div
-                                            key={index}
-                                            className="flex items-start space-x-4 p-4 bg-[#0d3b6b]/30 rounded-lg backdrop-blur-sm hover:bg-[#0d3b6b]/50 transition-all duration-300"
+                                    ].map((item, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ delay: i * 0.1, duration: 0.5 }}
+                                            viewport={{ once: true }}
+                                            className="bg-[#024dae] rounded-xl p-6 text-white shadow-md"
                                         >
-                                            <div className="w-12 h-12 bg-[#024dae] rounded-lg flex items-center justify-center flex-shrink-0">
-                                                <item.icon className="h-6 w-6 text-[#5cdee5]" />
+                                            <div
+
+                                                className="flex items-start space-x-4 p-4 bg-[#0d3b6b]/30 rounded-lg backdrop-blur-sm hover:bg-[#0d3b6b]/50 transition-all duration-300"
+                                            >
+                                                <div className="w-12 h-12 bg-[#024dae] rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <item.icon className="h-6 w-6 text-[#5cdee5]" />
+                                                </div>
+                                                <div>
+                                                    <h4 className="font-semibold text-[#ff8728] mb-1">{item.title}</h4>
+                                                    <p className="text-gray-300 text-sm">{item.desc}</p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h4 className="font-semibold text-[#ff8728] mb-1">{item.title}</h4>
-                                                <p className="text-gray-300 text-sm">{item.desc}</p>
-                                            </div>
-                                        </div>
+                                        </motion.div>
                                     ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Módulos del Sistema */}
-            <section id="funcionalidades" className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20">
+            <section id="funcionalidades" className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Módulos del Sistema</h2>
@@ -155,31 +165,39 @@ export const Landing = () => {
                             { icon: Users, title: "Personas", desc: "Gestión de beneficiarios y voluntarios", color: "#ff8728" },
                             { icon: BarChart3, title: "Reportes", desc: "Análisis y métricas de impacto", color: "#5cdee5" },
                             { icon: Warehouse, title: "Almacenes", desc: "Control de ubicaciones y distribución", color: "#024dae" },
-                        ].map((module, index) => (
-                            <Card
-                                key={index}
-                                className="bg-[#0d3b6b]/30 border-[#024dae]/30 backdrop-blur-sm hover:bg-[#0d3b6b]/50 transition-all duration-300 hover:scale-105 group"
+                        ].map((module, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: i * 0.1, duration: 0.5 }}
+                                viewport={{ once: true }}
+                                className="bg-[#024dae] rounded-xl p-6 text-white shadow-md"
                             >
-                                <CardHeader className="text-center">
-                                    <div
-                                        className="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                                        style={{ backgroundColor: `${module.color}20` }}
-                                    >
-                                        <module.icon className="h-8 w-8" style={{ color: module.color }} />
-                                    </div>
-                                    <CardTitle className="text-white text-xl">{module.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <CardDescription className="text-gray-300 text-center">{module.desc}</CardDescription>
-                                </CardContent>
-                            </Card>
+                                <Card
+                                    className="bg-[#0d3b6b]/30 border-[#024dae]/30 backdrop-blur-sm hover:bg-[#0d3b6b]/50 transition-all duration-300 hover:scale-105 group"
+                                >
+                                    <CardHeader className="text-center">
+                                        <div
+                                            className="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                                            style={{ backgroundColor: `${module.color}20` }}
+                                        >
+                                            <module.icon className="h-8 w-8" style={{ color: module.color }} />
+                                        </div>
+                                        <CardTitle className="text-white text-xl">{module.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <CardDescription className="text-gray-300 text-center">{module.desc}</CardDescription>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Reportes y Panel */}
-            <section className="py-20">
+            <section className="py-20" >
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
@@ -234,10 +252,10 @@ export const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Tecnología */}
-            <section className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20">
+            <section className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Tecnología Moderna</h2>
@@ -250,14 +268,23 @@ export const Landing = () => {
                                 { name: "React", desc: "Frontend moderno y reactivo", icon: Code },
                                 { name: "NestJS", desc: "Backend robusto y escalable", icon: Server },
                                 { name: "PostgreSQL", desc: "Base de datos confiable", icon: Database },
-                            ].map((tech, index) => (
-                                <div key={index} className="text-center group">
-                                    <div className="w-20 h-20 mx-auto mb-4 bg-[#024dae]/20 rounded-2xl flex items-center justify-center group-hover:bg-[#024dae]/40 transition-all duration-300">
-                                        <tech.icon className="h-10 w-10 text-[#5cdee5]" />
+                            ].map((tech, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                                    viewport={{ once: true }}
+                                    className="bg-[#024dae] rounded-xl p-6 text-white shadow-md"
+                                >
+                                    <div className="text-center group">
+                                        <div className="w-20 h-20 mx-auto mb-4 bg-[#024dae]/20 rounded-2xl flex items-center justify-center group-hover:bg-[#024dae]/40 transition-all duration-300">
+                                            <tech.icon className="h-10 w-10 text-[#5cdee5]" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-white mb-2">{tech.name}</h3>
+                                        <p className="text-gray-300 text-sm">{tech.desc}</p>
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2">{tech.name}</h3>
-                                    <p className="text-gray-300 text-sm">{tech.desc}</p>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
 
@@ -269,10 +296,10 @@ export const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Metodología SCRUM */}
-            <section className="py-20">
+            <section className="py-20" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Metodología SCRUM</h2>
@@ -300,25 +327,34 @@ export const Landing = () => {
                                     desc: "Evaluaciones constantes para garantizar calidad y funcionalidad",
                                     color: "#024dae",
                                 },
-                            ].map((item, index) => (
-                                <div key={index} className="text-center group">
-                                    <div
-                                        className="w-24 h-24 mx-auto mb-6 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                                        style={{ backgroundColor: `${item.color}20` }}
-                                    >
-                                        <item.icon className="h-12 w-12" style={{ color: item.color }} />
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                                    viewport={{ once: true }}
+                                    className="bg-[#024dae] rounded-xl p-6 text-white shadow-md"
+                                >
+                                    <div className="text-center group">
+                                        <div
+                                            className="w-24 h-24 mx-auto mb-6 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                                            style={{ backgroundColor: `${item.color}20` }}
+                                        >
+                                            <item.icon className="h-12 w-12" style={{ color: item.color }} />
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                                        <p className="text-gray-300 leading-relaxed">{item.desc}</p>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                                    <p className="text-gray-300 leading-relaxed">{item.desc}</p>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Mensaje Final */}
-            <section className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20">
+            <section className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20" >
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl font-bold mb-8 text-[#5cdee5]">Nuestro Compromiso</h2>
@@ -339,10 +375,10 @@ export const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Footer */}
-            <footer className="py-16 bg-[#0d3b6b]/40 backdrop-blur-sm">
+            <footer className="py-16 bg-[#0d3b6b]/40 backdrop-blur-sm" >
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -384,7 +420,7 @@ export const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </footer >
+        </div >
     )
 }
