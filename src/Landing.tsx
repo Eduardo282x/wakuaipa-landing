@@ -49,10 +49,10 @@ export const Landing = () => {
                             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#5cdee5] to-[#024dae] bg-clip-text text-transparent julius">
                                 Wakuaipa
                             </h1>
-                            <p className="text-xl md:text-2xl mb-8 text-gray-300">Sistema de Gestión para la Fundación Wayuu Taya</p>
+                            <p className="text-xl w-3/4 mx-auto md:w-full  md:text-2xl mb-8 text-gray-300">Sistema de Gestión para la <span className="font-black">Fundación Wayuu Taya</span></p>
                             <Button
                                 onClick={() => scrollToSection("funcionalidades")}
-                                className="bg-[#e4717a]/80 hover:bg-[#e4717a] text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+                                className="bg-[#ff8728]/80 hover:bg-[#ff8728] text-white !px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
                             >
                                 Ver funcionalidades
                                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -70,7 +70,7 @@ export const Landing = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl font-bold mb-8 text-[#5cdee5] julius">Introducción</h2>
-                        <p className="text-lg text-gray-300 mb-12 leading-relaxed">
+                        <p className="text-lg text-gray-300 mb-12 leading-relaxed text-justify">
                             Wakuaipa es un sistema integral diseñado específicamente para optimizar la gestión de recursos y
                             operaciones de la Fundación Wayuu Taya. Nuestro compromiso es brindar una solución tecnológica que
                             facilite el trabajo humanitario y maximice el impacto social de cada donación y recurso disponible.
@@ -78,11 +78,11 @@ export const Landing = () => {
                         <div className="bg-[#0d3b6b]/30 rounded-2xl p-8 backdrop-blur-sm">
                             <div className="flex items-center justify-center mb-4">
                                 <div className="w-16 h-16 bg-[#024dae]/35 rounded-full flex items-center justify-center">
-                                    <Heart className="h-8 w-8 text-[#e4717a]" />
+                                    <Heart className="h-8 w-8 text-[#ff8728]" />
                                 </div>
                             </div>
-                            <p className="text-gray-300">
-                                <strong className="text-[#e4717a]">Nuestro compromiso:</strong> Desarrollar tecnología con propósito
+                            <p className="text-gray-300 text-justify text-lg">
+                                <strong className="text-[#ff8728]">Nuestro compromiso:</strong> Desarrollar tecnología con propósito
                                 social, facilitando la gestión eficiente de recursos para maximizar el impacto en las comunidades Wayuu.
                             </p>
                         </div>
@@ -97,8 +97,8 @@ export const Landing = () => {
                         <div className="grid md:grid-cols-2 gap-12">
                             {/* Problema */}
                             <div className="space-y-6">
-                                <h2 className="text-4xl font-bold text-[#e4717a] julius">¿Qué problema resolvemos?</h2>
-                                <p className="text-gray-300 text-lg leading-relaxed">
+                                <h2 className="text-4xl font-bold text-[#ff8728] julius">¿Qué problema resolvemos?</h2>
+                                <p className="text-gray-300 text-lg leading-relaxed text-justify">
                                     Las fundaciones y organizaciones sin fines de lucro enfrentan desafíos significativos en la gestión de
                                     donaciones, inventarios y documentación. La falta de sistemas centralizados genera pérdida de
                                     información, duplicación de esfuerzos y dificultades para generar reportes precisos sobre el impacto
@@ -154,7 +154,7 @@ export const Landing = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {[
-                            { icon: Heart, title: "Donaciones", desc: "Gestión completa de donaciones y donantes", color: "#e4717a" },
+                            { icon: Heart, title: "Donaciones", desc: "Gestión completa de donaciones y donantes", color: "#ff8728" },
                             { icon: Package, title: "Inventario", desc: "Control de stock y recursos disponibles", color: "#FFDB58" },
                             {
                                 icon: FileText,
@@ -207,7 +207,7 @@ export const Landing = () => {
 
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
-                                <h3 className="text-2xl font-bold text-[#e4717a] julius">Dashboard Inteligente</h3>
+                                <h3 className="text-2xl font-bold text-[#ff8728] julius">Dashboard Inteligente</h3>
                                 <p className="text-gray-300 leading-relaxed">
                                     Nuestro panel de control proporciona una vista completa y en tiempo real de todas las operaciones de
                                     la fundación. Con gráficos interactivos y métricas clave, facilita la toma de decisiones estratégicas
@@ -232,7 +232,7 @@ export const Landing = () => {
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[#5cdee5]">Donaciones este mes</span>
-                                        <Badge className="bg-[#e4717a] text-white">+15%</Badge>
+                                        <Badge className="bg-[#ff8728] text-white">+15%</Badge>
                                     </div>
                                     <div className="h-2 bg-[#0d3b6b] rounded-full overflow-hidden">
                                         <div className="h-full w-3/4 bg-gradient-to-r from-[#5cdee5] to-[#024dae] rounded-full"></div>
@@ -243,7 +243,7 @@ export const Landing = () => {
                                             <div className="text-sm text-gray-300">Beneficiarios</div>
                                         </div>
                                         <div className="text-center p-4 bg-[#0d3b6b]/50 rounded-lg">
-                                            <div className="text-2xl font-bold text-[#e4717a]">89%</div>
+                                            <div className="text-2xl font-bold text-[#ff8728]">89%</div>
                                             <div className="text-sm text-gray-300">Eficiencia</div>
                                         </div>
                                     </div>
@@ -289,8 +289,8 @@ export const Landing = () => {
                         </div>
 
                         <div className="text-center bg-[#0d3b6b]/30 rounded-2xl p-8 backdrop-blur-sm">
-                            <p className="text-gray-300 text-lg">
-                                <strong className="text-[#e4717a]">Enfoque moderno:</strong> Utilizamos tecnologías de vanguardia para
+                            <p className="text-gray-300 text-xl text-justify">
+                                <strong className="text-[#ff8728]">Enfoque moderno:</strong> Utilizamos tecnologías de vanguardia para
                                 garantizar un sistema rápido, seguro y escalable que crezca junto con las necesidades de la fundación.
                             </p>
                         </div>
@@ -358,8 +358,8 @@ export const Landing = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl font-bold mb-8 text-[#5cdee5] julius">Nuestro Compromiso</h2>
-                        <div className="bg-[#0d3b6b]/30 rounded-2xl p-12 backdrop-blur-sm">
-                            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                        <div className="bg-[#0d3b6b]/30 rounded-2xl p-12 backdrop-blur-sm ">
+                            <p className="text-xl text-gray-300 mb-8 leading-relaxed text-justify">
                                 Como equipo de desarrollo, nos enorgullece contribuir con nuestras habilidades técnicas a una causa
                                 social tan importante. Wakuaipa representa nuestro compromiso con la innovación tecnológica al servicio
                                 del bienestar comunitario.
@@ -390,14 +390,14 @@ export const Landing = () => {
                             </div>
 
                             <div>
-                                <h4 className="text-lg font-semibold text-[#e4717a] mb-4 julius">Universidad</h4>
+                                <h4 className="text-lg font-semibold text-[#ff8728] mb-4 julius">Universidad</h4>
                                 <p className="text-gray-300">
-                                    Proyecto desarrollado como parte del programa académico de Ingeniería de Sistemas.
+                                    Proyecto desarrollado como parte del servicio comunitario del Politecnico Santiago Mariño.
                                 </p>
                             </div>
 
                             <div>
-                                <h4 className="text-lg font-semibold text-[#e4717a] mb-4 julius">Equipo de Desarrollo</h4>
+                                <h4 className="text-lg font-semibold text-[#ff8728] mb-4 julius">Equipo de Desarrollo</h4>
                                 <p className="text-gray-300 mb-4">
                                     Estudiantes comprometidos con la innovación tecnológica y el impacto social.
                                 </p>
