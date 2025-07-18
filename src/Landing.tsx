@@ -37,7 +37,7 @@ export const Landing = () => {
     }
 
     return (
-        <div className="min-h-screen bg-[#171f27] text-white font-['Poppins',sans-serif]">
+        <div className="min-h-screen bg-[#171f27] text-white font-['manrope']">
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#024dae]/20 to-[#0d3b6b]/40"></div>
@@ -46,13 +46,13 @@ export const Landing = () => {
                         <div
                             className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                         >
-                            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#5cdee5] to-[#024dae] bg-clip-text text-transparent">
+                            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#5cdee5] to-[#024dae] bg-clip-text text-transparent julius">
                                 Wakuaipa
                             </h1>
                             <p className="text-xl md:text-2xl mb-8 text-gray-300">Sistema de Gestión para la Fundación Wayuu Taya</p>
                             <Button
                                 onClick={() => scrollToSection("funcionalidades")}
-                                className="bg-[#ff8728] hover:bg-[#ff8728]/80 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+                                className="bg-[#e4717a]/80 hover:bg-[#e4717a] text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
                             >
                                 Ver funcionalidades
                                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -69,7 +69,7 @@ export const Landing = () => {
             <section className="py-20 bg-gradient-to-b from-[#171f27] to-[#0d3b6b]/20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-4xl font-bold mb-8 text-[#5cdee5]">Introducción</h2>
+                        <h2 className="text-4xl font-bold mb-8 text-[#5cdee5] julius">Introducción</h2>
                         <p className="text-lg text-gray-300 mb-12 leading-relaxed">
                             Wakuaipa es un sistema integral diseñado específicamente para optimizar la gestión de recursos y
                             operaciones de la Fundación Wayuu Taya. Nuestro compromiso es brindar una solución tecnológica que
@@ -77,12 +77,12 @@ export const Landing = () => {
                         </p>
                         <div className="bg-[#0d3b6b]/30 rounded-2xl p-8 backdrop-blur-sm">
                             <div className="flex items-center justify-center mb-4">
-                                <div className="w-16 h-16 bg-[#024dae] rounded-full flex items-center justify-center">
-                                    <Heart className="h-8 w-8 text-[#5cdee5]" />
+                                <div className="w-16 h-16 bg-[#024dae]/35 rounded-full flex items-center justify-center">
+                                    <Heart className="h-8 w-8 text-[#e4717a]" />
                                 </div>
                             </div>
                             <p className="text-gray-300">
-                                <strong className="text-[#ff8728]">Nuestro compromiso:</strong> Desarrollar tecnología con propósito
+                                <strong className="text-[#e4717a]">Nuestro compromiso:</strong> Desarrollar tecnología con propósito
                                 social, facilitando la gestión eficiente de recursos para maximizar el impacto en las comunidades Wayuu.
                             </p>
                         </div>
@@ -97,7 +97,7 @@ export const Landing = () => {
                         <div className="grid md:grid-cols-2 gap-12">
                             {/* Problema */}
                             <div className="space-y-6">
-                                <h2 className="text-4xl font-bold text-[#ff8728]">¿Qué problema resolvemos?</h2>
+                                <h2 className="text-4xl font-bold text-[#e4717a] julius">¿Qué problema resolvemos?</h2>
                                 <p className="text-gray-300 text-lg leading-relaxed">
                                     Las fundaciones y organizaciones sin fines de lucro enfrentan desafíos significativos en la gestión de
                                     donaciones, inventarios y documentación. La falta de sistemas centralizados genera pérdida de
@@ -108,7 +108,7 @@ export const Landing = () => {
 
                             {/* Solución */}
                             <div className="space-y-6">
-                                <h3 className="text-3xl font-bold text-[#5cdee5]">¿Cómo lo solucionamos?</h3>
+                                <h3 className="text-3xl font-bold text-[#5cdee5] julius">¿Cómo lo solucionamos?</h3>
                                 <div className="space-y-4">
                                     {[
                                         { icon: Target, title: "Centralización", desc: "Toda la información en un solo lugar" },
@@ -128,10 +128,10 @@ export const Landing = () => {
                                                 className="flex items-start space-x-4 p-4 bg-[#0d3b6b]/30 rounded-lg backdrop-blur-sm hover:bg-[#0d3b6b]/50 transition-all duration-300"
                                             >
                                                 <div className="w-12 h-12 bg-[#024dae] rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <item.icon className="h-6 w-6 text-[#5cdee5]" />
+                                                    <item.icon className="h-6 w-6 text-white" />
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-semibold text-[#ff8728] mb-1">{item.title}</h4>
+                                                    <h4 className="font-semibold text-white mb-1">{item.title}</h4>
                                                     <p className="text-gray-300 text-sm">{item.desc}</p>
                                                 </div>
                                             </div>
@@ -148,23 +148,23 @@ export const Landing = () => {
             <section id="funcionalidades" className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Módulos del Sistema</h2>
+                        <h2 className="text-4xl font-bold mb-4 text-[#5cdee5] julius">Módulos del Sistema</h2>
                         <p className="text-gray-300 text-lg">Funcionalidades completas para una gestión integral</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {[
-                            { icon: Heart, title: "Donaciones", desc: "Gestión completa de donaciones y donantes", color: "#ff8728" },
-                            { icon: Package, title: "Inventario", desc: "Control de stock y recursos disponibles", color: "#5cdee5" },
+                            { icon: Heart, title: "Donaciones", desc: "Gestión completa de donaciones y donantes", color: "#e4717a" },
+                            { icon: Package, title: "Inventario", desc: "Control de stock y recursos disponibles", color: "#FFDB58" },
                             {
                                 icon: FileText,
                                 title: "Documentos",
                                 desc: "Almacenamiento y organización documental",
-                                color: "#024dae",
+                                color: "#F5F5F5",
                             },
-                            { icon: Users, title: "Personas", desc: "Gestión de beneficiarios y voluntarios", color: "#ff8728" },
+                            { icon: Users, title: "Personas", desc: "Gestión de beneficiarios y voluntarios", color: "#00FFFF" },
                             { icon: BarChart3, title: "Reportes", desc: "Análisis y métricas de impacto", color: "#5cdee5" },
-                            { icon: Warehouse, title: "Almacenes", desc: "Control de ubicaciones y distribución", color: "#024dae" },
+                            { icon: Warehouse, title: "Almacenes", desc: "Control de ubicaciones y distribución", color: "	#FF8243" },
                         ].map((module, i) => (
                             <motion.div
                                 key={i}
@@ -201,13 +201,13 @@ export const Landing = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Panel de Control y Reportes</h2>
+                            <h2 className="text-4xl font-bold mb-4 text-[#5cdee5] julius">Panel de Control y Reportes</h2>
                             <p className="text-gray-300 text-lg">Información clara para tomar mejores decisiones</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
-                                <h3 className="text-2xl font-bold text-[#ff8728]">Dashboard Inteligente</h3>
+                                <h3 className="text-2xl font-bold text-[#e4717a] julius">Dashboard Inteligente</h3>
                                 <p className="text-gray-300 leading-relaxed">
                                     Nuestro panel de control proporciona una vista completa y en tiempo real de todas las operaciones de
                                     la fundación. Con gráficos interactivos y métricas clave, facilita la toma de decisiones estratégicas
@@ -232,7 +232,7 @@ export const Landing = () => {
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between">
                                         <span className="text-[#5cdee5]">Donaciones este mes</span>
-                                        <Badge className="bg-[#ff8728] text-white">+15%</Badge>
+                                        <Badge className="bg-[#e4717a] text-white">+15%</Badge>
                                     </div>
                                     <div className="h-2 bg-[#0d3b6b] rounded-full overflow-hidden">
                                         <div className="h-full w-3/4 bg-gradient-to-r from-[#5cdee5] to-[#024dae] rounded-full"></div>
@@ -243,7 +243,7 @@ export const Landing = () => {
                                             <div className="text-sm text-gray-300">Beneficiarios</div>
                                         </div>
                                         <div className="text-center p-4 bg-[#0d3b6b]/50 rounded-lg">
-                                            <div className="text-2xl font-bold text-[#ff8728]">89%</div>
+                                            <div className="text-2xl font-bold text-[#e4717a]">89%</div>
                                             <div className="text-sm text-gray-300">Eficiencia</div>
                                         </div>
                                     </div>
@@ -258,7 +258,7 @@ export const Landing = () => {
             <section className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Tecnología Moderna</h2>
+                        <h2 className="text-4xl font-bold mb-4 text-[#5cdee5] julius">Tecnología Moderna</h2>
                         <p className="text-gray-300 text-lg">Construido con las mejores herramientas del mercado</p>
                     </div>
 
@@ -279,7 +279,7 @@ export const Landing = () => {
                                 >
                                     <div className="text-center group">
                                         <div className="w-20 h-20 mx-auto mb-4 bg-[#024dae]/20 rounded-2xl flex items-center justify-center group-hover:bg-[#024dae]/40 transition-all duration-300">
-                                            <tech.icon className="h-10 w-10 text-[#5cdee5]" />
+                                            <tech.icon className="h-10 w-10 text-white" />
                                         </div>
                                         <h3 className="text-xl font-bold text-white mb-2">{tech.name}</h3>
                                         <p className="text-gray-300 text-sm">{tech.desc}</p>
@@ -290,7 +290,7 @@ export const Landing = () => {
 
                         <div className="text-center bg-[#0d3b6b]/30 rounded-2xl p-8 backdrop-blur-sm">
                             <p className="text-gray-300 text-lg">
-                                <strong className="text-[#ff8728]">Enfoque moderno:</strong> Utilizamos tecnologías de vanguardia para
+                                <strong className="text-[#e4717a]">Enfoque moderno:</strong> Utilizamos tecnologías de vanguardia para
                                 garantizar un sistema rápido, seguro y escalable que crezca junto con las necesidades de la fundación.
                             </p>
                         </div>
@@ -302,7 +302,7 @@ export const Landing = () => {
             <section className="py-20" >
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4 text-[#5cdee5]">Metodología SCRUM</h2>
+                        <h2 className="text-4xl font-bold mb-4 text-[#5cdee5] julius">Metodología SCRUM</h2>
                         <p className="text-gray-300 text-lg">Desarrollo ágil para resultados efectivos</p>
                     </div>
 
@@ -313,19 +313,19 @@ export const Landing = () => {
                                     icon: Calendar,
                                     title: "Planeación",
                                     desc: "Sprints organizados con objetivos claros y entregas incrementales",
-                                    color: "#ff8728",
+                                    color: "#00FFFF",
                                 },
                                 {
                                     icon: Zap,
                                     title: "Desarrollo Ágil",
                                     desc: "Iteraciones rápidas con feedback continuo del cliente",
-                                    color: "#5cdee5",
+                                    color: "#FFDB58",
                                 },
                                 {
                                     icon: CheckCircle,
                                     title: "Revisiones",
                                     desc: "Evaluaciones constantes para garantizar calidad y funcionalidad",
-                                    color: "#024dae",
+                                    color: "#00FF00",
                                 },
                             ].map((item, i) => (
                                 <motion.div
@@ -357,14 +357,14 @@ export const Landing = () => {
             <section className="py-20 bg-gradient-to-b from-transparent to-[#0d3b6b]/20" >
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-4xl font-bold mb-8 text-[#5cdee5]">Nuestro Compromiso</h2>
+                        <h2 className="text-4xl font-bold mb-8 text-[#5cdee5] julius">Nuestro Compromiso</h2>
                         <div className="bg-[#0d3b6b]/30 rounded-2xl p-12 backdrop-blur-sm">
                             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                                 Como equipo de desarrollo, nos enorgullece contribuir con nuestras habilidades técnicas a una causa
                                 social tan importante. Wakuaipa representa nuestro compromiso con la innovación tecnológica al servicio
                                 del bienestar comunitario.
                             </p>
-                            <blockquote className="text-2xl font-bold text-[#ff8728] italic mb-8">
+                            <blockquote className="text-2xl font-bold text-white italic mb-8">
                                 "Desarrollado con compromiso, innovación y propósito social."
                             </blockquote>
                             <div className="flex items-center justify-center">
@@ -383,21 +383,21 @@ export const Landing = () => {
                     <div className="max-w-6xl mx-auto">
                         <div className="grid md:grid-cols-3 gap-8 mb-8">
                             <div>
-                                <h3 className="text-2xl font-bold text-[#5cdee5] mb-4">Wakuaipa</h3>
+                                <h3 className="text-2xl font-bold text-[#5cdee5] mb-4 julius">Wakuaipa</h3>
                                 <p className="text-gray-300 mb-4">
                                     Sistema de gestión desarrollado para optimizar las operaciones de la Fundación Wayuu Taya.
                                 </p>
                             </div>
 
                             <div>
-                                <h4 className="text-lg font-semibold text-[#ff8728] mb-4">Universidad</h4>
+                                <h4 className="text-lg font-semibold text-[#e4717a] mb-4 julius">Universidad</h4>
                                 <p className="text-gray-300">
                                     Proyecto desarrollado como parte del programa académico de Ingeniería de Sistemas.
                                 </p>
                             </div>
 
                             <div>
-                                <h4 className="text-lg font-semibold text-[#ff8728] mb-4">Equipo de Desarrollo</h4>
+                                <h4 className="text-lg font-semibold text-[#e4717a] mb-4 julius">Equipo de Desarrollo</h4>
                                 <p className="text-gray-300 mb-4">
                                     Estudiantes comprometidos con la innovación tecnológica y el impacto social.
                                 </p>
